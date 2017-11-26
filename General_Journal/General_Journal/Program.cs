@@ -6,9 +6,9 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 
 namespace General_Journal
-{    
+{   
     static class Program
-    {
+    {        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

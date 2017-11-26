@@ -36,7 +36,7 @@ namespace General_Journal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit();
+            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit();            
             frmCompany_frmAddEdit.Show();
         }
 
@@ -52,18 +52,53 @@ namespace General_Journal
             refreshCompanyData();
         }
 
-        //private void loadDataCompany()
-        //{
-        //    conn = new OleDbConnection(System.Configuration.ConfigurationManager.ConnectionStrings["General_Journal.Properties.Settings.General_JournalConnectionString"].ConnectionString);
-        //    string strSql = "Select [COMPANY_ID] ,[COMPANY_NAME] from company";
-        //    OleDbCommand cmd = new OleDbCommand(strSql, conn);
-        //    conn.Open();
-        //    cmd.CommandType = CommandType.Text;
-        //    OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-        //    DataTable scores = new DataTable();
-        //    da.Fill(scores);
-        //    dataGridView1.DataSource = scores;
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            String compId = dataGCompany[0, dataGCompany.CurrentCell.RowIndex].Value.ToString();
+            String compName = dataGCompany[1, dataGCompany.CurrentCell.RowIndex].Value.ToString();
 
-        //}
+            DialogResult dialogResult = MessageBox.Show("Do you want to delete "+ compName, "Message", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    conn = new OleDbConnection(System.Configuration.ConfigurationManager.ConnectionStrings["General_Journal.Properties.Settings.General_JournalConnectionString"].ConnectionString);
+                    string query = "DELETE FROM company WHERE [COMPANY_ID]=@compID";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        conn.Open();
+                        cmd.Parameters.AddWithValue("@compID", compId);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Remove "+ compName + " done !!!");
+                        // refresh data gridview frmCompany
+                        refreshCompanyData();
+                    }
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            String compId = dataGCompany[0, dataGCompany.CurrentCell.RowIndex].Value.ToString();
+            String compName = dataGCompany[1, dataGCompany.CurrentCell.RowIndex].Value.ToString();
+
+            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit(compId);
+            frmCompany_frmAddEdit.Show();
+
+        }
     }
 }

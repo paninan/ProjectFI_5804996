@@ -14,9 +14,52 @@ namespace General_Journal
     public partial class frmCompany_frmAddEdit : Form
     {
         OleDbConnection conn = null;
+        public bool isAdd = false;
+        public bool isEdit = false;
+        public string compID = null;
+
         public frmCompany_frmAddEdit()
         {
             InitializeComponent();
+            isAdd = true;
+        }
+
+        public frmCompany_frmAddEdit(String companyID)
+        {
+            // load company data 
+            InitializeComponent();
+            isEdit = true;
+            compID = companyID;
+            //// connect database
+            try
+            {
+                conn = new OleDbConnection(System.Configuration.ConfigurationManager.ConnectionStrings["General_Journal.Properties.Settings.General_JournalConnectionString"].ConnectionString);
+                using (OleDbCommand cmd = new OleDbCommand("select * from company where [COMPANY_ID]=@compID", conn))
+                {
+                    cmd.Parameters.AddWithValue("@compID", companyID);
+                    cmd.Connection.Open();
+                    OleDbDataReader reader = null;
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        txtCompanyName.Text = reader["COMPANY_NAME"].ToString();
+                        txtAddress.Text = reader["COMPANY_ADDRESS"].ToString();
+                        txtPhone.Text = reader["COMPANY_PHONE"].ToString();
+                        txtTradeRegisNo.Text = reader["COMPANY_TRADE_REGIS"].ToString();
+                        txtTaxIdNo.Text = reader["COMPANY_TAX_ID"].ToString();
+                    }
+
+                }
+
+            }
+            catch (Exception Ex)
+            {
+                conn.Dispose();
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -63,6 +106,21 @@ namespace General_Journal
 
             }
 
+            // save into database
+            if ( isAdd )
+            {
+                save();
+            }
+
+            // edit on database by companyid
+            if (isEdit)
+            {
+                edit();
+            }
+        }
+
+        private void save()
+        {
             //// connect database
             try
             {
@@ -88,7 +146,7 @@ namespace General_Journal
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Saved ");
                 }
-                
+
 
                 // refresh data gridview frmCompany
 
@@ -101,6 +159,50 @@ namespace General_Journal
             {
                 conn.Close();
             }
+
+        }
+
+        private void edit()
+        {
+            //// connect database
+            try
+            {
+                conn = new OleDbConnection(System.Configuration.ConfigurationManager.ConnectionStrings["General_Journal.Properties.Settings.General_JournalConnectionString"].ConnectionString);
+
+                string query = "UPDATE company SET " +
+                    "[COMPANY_NAME]=@compName " +
+                    ",[COMPANY_ADDRESS]=@compAddress " +
+                    ",[COMPANY_PHONE]=@compPhone " +
+                    ",[COMPANY_TRADE_REGIS]=@compTrade " +
+                    ",[COMPANY_TAX_ID]=@compTax " +
+                    " WHERE [COMPANY_ID]=@compId";                  
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@compName", txtCompanyName.Text);
+                    cmd.Parameters.AddWithValue("@compAddress", txtAddress.Text);
+                    cmd.Parameters.AddWithValue("@compPhone", txtPhone.Text);
+                    cmd.Parameters.AddWithValue("@compTrade", txtTradeRegisNo.Text);
+                    cmd.Parameters.AddWithValue("@compTax", txtTaxIdNo.Text);
+                    cmd.Parameters.AddWithValue("@compId", compID);
+                    
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Updated ");
+                }
+
+
+                // refresh data gridview frmCompany
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         private void frmCompany_frmAddEdit_Load(object sender, EventArgs e)
