@@ -144,7 +144,7 @@
             <Mappings>
               <Mapping SourceColumn="COMPANY_ID" DataSetColumn="COMPANY_ID" />
               <Mapping SourceColumn="COMPANY_NAME" DataSetColumn="COMPANY_NAME" />
-              <Mapping SourceColumn="COMPANY_ ADDRESS" DataSetColumn="COMPANY_ ADDRESS" />
+              <Mapping SourceColumn="COMPANY_ ADDRESS" DataSetColumn="COMPANY_ADDRESS" />
               <Mapping SourceColumn="COMPANY_PHONE" DataSetColumn="COMPANY_PHONE" />
               <Mapping SourceColumn="COMPANY_TRADE_REGIS" DataSetColumn="COMPANY_TRADE_REGIS" />
               <Mapping SourceColumn="COMPANY_TAX_ID" DataSetColumn="COMPANY_TAX_ID" />
@@ -159,7 +159,7 @@
   <xs:element name="General_JournalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="General_JournalDataSet" msprop:Generator_UserDSName="General_JournalDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="users" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_TableVarName="tableusers" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_TablePropName="users" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_RowClassName="usersRow" msprop:Generator_UserTableName="users" msprop:Generator_RowEvArgName="usersRowChangeEvent">
+        <xs:element name="users" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_TableVarName="tableusers" msprop:Generator_TablePropName="users" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_UserTableName="users" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_RowEvArgName="usersRowChangeEvent" msprop:Generator_RowClassName="usersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -201,7 +201,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="company" msprop:Generator_TableClassName="companyDataTable" msprop:Generator_TableVarName="tablecompany" msprop:Generator_TablePropName="company" msprop:Generator_RowDeletingName="companyRowDeleting" msprop:Generator_RowChangingName="companyRowChanging" msprop:Generator_RowEvHandlerName="companyRowChangeEventHandler" msprop:Generator_RowDeletedName="companyRowDeleted" msprop:Generator_UserTableName="company" msprop:Generator_RowChangedName="companyRowChanged" msprop:Generator_RowEvArgName="companyRowChangeEvent" msprop:Generator_RowClassName="companyRow">
+        <xs:element name="company" msprop:Generator_TableClassName="companyDataTable" msprop:Generator_TableVarName="tablecompany" msprop:Generator_RowChangedName="companyRowChanged" msprop:Generator_TablePropName="company" msprop:Generator_RowDeletingName="companyRowDeleting" msprop:Generator_RowChangingName="companyRowChanging" msprop:Generator_RowEvHandlerName="companyRowChangeEventHandler" msprop:Generator_RowDeletedName="companyRowDeleted" msprop:Generator_RowClassName="companyRow" msprop:Generator_UserTableName="company" msprop:Generator_RowEvArgName="companyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="COMPANY_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_ID" msprop:Generator_ColumnPropNameInRow="COMPANY_ID" msprop:Generator_ColumnPropNameInTable="COMPANY_IDColumn" msprop:Generator_UserColumnName="COMPANY_ID" type="xs:int" />
@@ -212,7 +212,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="COMPANY__x0020_ADDRESS" msprop:Generator_ColumnVarNameInTable="columnCOMPANY__ADDRESS" msprop:Generator_ColumnPropNameInRow="COMPANY__ADDRESS" msprop:Generator_ColumnPropNameInTable="COMPANY__ADDRESSColumn" msprop:Generator_UserColumnName="COMPANY_ ADDRESS" minOccurs="0">
+              <xs:element name="COMPANY_ADDRESS" msprop:Generator_ColumnVarNameInTable="columnCOMPANY_ADDRESS" msprop:Generator_ColumnPropNameInRow="COMPANY_ADDRESS" msprop:Generator_ColumnPropNameInTable="COMPANY_ADDRESSColumn" msprop:Generator_UserColumnName="COMPANY_ADDRESS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="536870910" />

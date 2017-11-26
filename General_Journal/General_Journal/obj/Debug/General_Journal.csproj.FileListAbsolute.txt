@@ -1,13 +1,7 @@
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.csprojResolveAssemblyReference.cache
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmLogin.resources
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmMain.resources
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.Properties.Resources.resources
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.csproj.GenerateResource.Cache
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\bin\Debug\General_Journal.exe.config
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\bin\Debug\General_Journal.exe
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\bin\Debug\General_Journal.pdb
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.exe
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.pdb
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmLogin.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmAccNo.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmAuto.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmAuto_AddEdit.resources
@@ -15,5 +9,9 @@ C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\Gene
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmCompany_frmAddEdit.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmGeneralJournal.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmGerneralJournal_auto.resources
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmMain.resources
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmReport.resources
-C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\bin\Debug\General_Journal.accdb
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.Properties.Resources.resources
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.csproj.GenerateResource.Cache
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.exe
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.pdb

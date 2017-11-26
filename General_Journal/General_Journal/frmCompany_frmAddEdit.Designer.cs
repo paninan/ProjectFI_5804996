@@ -195,6 +195,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCompany_frmAddEdit";
             this.Text = "frmCompany_frmAddEdit";
+            this.Load += new System.EventHandler(this.frmCompany_frmAddEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

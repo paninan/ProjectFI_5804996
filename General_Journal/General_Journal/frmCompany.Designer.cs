@@ -30,22 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGCompany = new System.Windows.Forms.DataGridView();
+            this.cOMPANYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPANYNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.general_JournalDataSet = new General_Journal.General_JournalDataSet();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.general_JournalDataSet = new General_Journal.General_JournalDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new General_Journal.General_JournalDataSetTableAdapters.usersTableAdapter();
-            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyTableAdapter = new General_Journal.General_JournalDataSetTableAdapters.companyTableAdapter();
-            this.cOMPANYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cOMPANYNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_JournalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGCompany
@@ -66,6 +67,32 @@
             this.dataGCompany.TabIndex = 0;
             this.dataGCompany.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGCmpany_RowHeaderMouseDoubleClick);
             // 
+            // cOMPANYIDDataGridViewTextBoxColumn
+            // 
+            this.cOMPANYIDDataGridViewTextBoxColumn.DataPropertyName = "COMPANY_ID";
+            this.cOMPANYIDDataGridViewTextBoxColumn.HeaderText = "COMPANY_ID";
+            this.cOMPANYIDDataGridViewTextBoxColumn.Name = "cOMPANYIDDataGridViewTextBoxColumn";
+            this.cOMPANYIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cOMPANYIDDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // cOMPANYNAMEDataGridViewTextBoxColumn
+            // 
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.DataPropertyName = "COMPANY_NAME";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.HeaderText = "COMPANY_NAME";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.Name = "cOMPANYNAMEDataGridViewTextBoxColumn";
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cOMPANYNAMEDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataMember = "company";
+            this.companyBindingSource.DataSource = this.general_JournalDataSet;
+            // 
+            // general_JournalDataSet
+            // 
+            this.general_JournalDataSet.DataSetName = "General_JournalDataSet";
+            this.general_JournalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(367, 390);
@@ -74,6 +101,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -111,11 +139,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Choose company";
             // 
-            // general_JournalDataSet
-            // 
-            this.general_JournalDataSet.DataSetName = "General_JournalDataSet";
-            this.general_JournalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
@@ -125,36 +148,26 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // companyBindingSource
-            // 
-            this.companyBindingSource.DataMember = "company";
-            this.companyBindingSource.DataSource = this.general_JournalDataSet;
-            // 
             // companyTableAdapter
             // 
             this.companyTableAdapter.ClearBeforeFill = true;
             // 
-            // cOMPANYIDDataGridViewTextBoxColumn
+            // btnRefresh
             // 
-            this.cOMPANYIDDataGridViewTextBoxColumn.DataPropertyName = "COMPANY_ID";
-            this.cOMPANYIDDataGridViewTextBoxColumn.HeaderText = "COMPANY_ID";
-            this.cOMPANYIDDataGridViewTextBoxColumn.Name = "cOMPANYIDDataGridViewTextBoxColumn";
-            this.cOMPANYIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cOMPANYIDDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // cOMPANYNAMEDataGridViewTextBoxColumn
-            // 
-            this.cOMPANYNAMEDataGridViewTextBoxColumn.DataPropertyName = "COMPANY_NAME";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn.HeaderText = "COMPANY_NAME";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn.Name = "cOMPANYNAMEDataGridViewTextBoxColumn";
-            this.cOMPANYNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cOMPANYNAMEDataGridViewTextBoxColumn.Width = 200;
+            this.btnRefresh.Location = new System.Drawing.Point(169, 390);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 711);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
@@ -165,9 +178,9 @@
             this.Text = "Company";
             this.Load += new System.EventHandler(this.frmCompany_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_JournalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +201,6 @@
         private General_JournalDataSetTableAdapters.companyTableAdapter companyTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

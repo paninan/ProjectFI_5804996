@@ -654,7 +654,7 @@ namespace General_Journal {
             
             private global::System.Data.DataColumn columnCOMPANY_NAME;
             
-            private global::System.Data.DataColumn columnCOMPANY__ADDRESS;
+            private global::System.Data.DataColumn columnCOMPANY_ADDRESS;
             
             private global::System.Data.DataColumn columnCOMPANY_PHONE;
             
@@ -713,9 +713,9 @@ namespace General_Journal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn COMPANY__ADDRESSColumn {
+            public global::System.Data.DataColumn COMPANY_ADDRESSColumn {
                 get {
-                    return this.columnCOMPANY__ADDRESS;
+                    return this.columnCOMPANY_ADDRESS;
                 }
             }
             
@@ -780,12 +780,12 @@ namespace General_Journal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public companyRow AddcompanyRow(string COMPANY_NAME, string COMPANY__ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID) {
+            public companyRow AddcompanyRow(string COMPANY_NAME, string COMPANY_ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID) {
                 companyRow rowcompanyRow = ((companyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         COMPANY_NAME,
-                        COMPANY__ADDRESS,
+                        COMPANY_ADDRESS,
                         COMPANY_PHONE,
                         COMPANY_TRADE_REGIS,
                         COMPANY_TAX_ID};
@@ -820,7 +820,7 @@ namespace General_Journal {
             internal void InitVars() {
                 this.columnCOMPANY_ID = base.Columns["COMPANY_ID"];
                 this.columnCOMPANY_NAME = base.Columns["COMPANY_NAME"];
-                this.columnCOMPANY__ADDRESS = base.Columns["COMPANY_ ADDRESS"];
+                this.columnCOMPANY_ADDRESS = base.Columns["COMPANY_ADDRESS"];
                 this.columnCOMPANY_PHONE = base.Columns["COMPANY_PHONE"];
                 this.columnCOMPANY_TRADE_REGIS = base.Columns["COMPANY_TRADE_REGIS"];
                 this.columnCOMPANY_TAX_ID = base.Columns["COMPANY_TAX_ID"];
@@ -833,8 +833,8 @@ namespace General_Journal {
                 base.Columns.Add(this.columnCOMPANY_ID);
                 this.columnCOMPANY_NAME = new global::System.Data.DataColumn("COMPANY_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCOMPANY_NAME);
-                this.columnCOMPANY__ADDRESS = new global::System.Data.DataColumn("COMPANY_ ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOMPANY__ADDRESS);
+                this.columnCOMPANY_ADDRESS = new global::System.Data.DataColumn("COMPANY_ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOMPANY_ADDRESS);
                 this.columnCOMPANY_PHONE = new global::System.Data.DataColumn("COMPANY_PHONE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCOMPANY_PHONE);
                 this.columnCOMPANY_TRADE_REGIS = new global::System.Data.DataColumn("COMPANY_TRADE_REGIS", typeof(string), null, global::System.Data.MappingType.Element);
@@ -849,7 +849,7 @@ namespace General_Journal {
                 this.columnCOMPANY_ID.AllowDBNull = false;
                 this.columnCOMPANY_ID.Unique = true;
                 this.columnCOMPANY_NAME.MaxLength = 255;
-                this.columnCOMPANY__ADDRESS.MaxLength = 536870910;
+                this.columnCOMPANY_ADDRESS.MaxLength = 536870910;
                 this.columnCOMPANY_PHONE.MaxLength = 255;
                 this.columnCOMPANY_TRADE_REGIS.MaxLength = 255;
                 this.columnCOMPANY_TAX_ID.MaxLength = 255;
@@ -1188,17 +1188,17 @@ namespace General_Journal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string COMPANY__ADDRESS {
+            public string COMPANY_ADDRESS {
                 get {
                     try {
-                        return ((string)(this[this.tablecompany.COMPANY__ADDRESSColumn]));
+                        return ((string)(this[this.tablecompany.COMPANY_ADDRESSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'COMPANY_ ADDRESS\' in table \'company\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'COMPANY_ADDRESS\' in table \'company\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecompany.COMPANY__ADDRESSColumn] = value;
+                    this[this.tablecompany.COMPANY_ADDRESSColumn] = value;
                 }
             }
             
@@ -1264,14 +1264,14 @@ namespace General_Journal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCOMPANY__ADDRESSNull() {
-                return this.IsNull(this.tablecompany.COMPANY__ADDRESSColumn);
+            public bool IsCOMPANY_ADDRESSNull() {
+                return this.IsNull(this.tablecompany.COMPANY_ADDRESSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCOMPANY__ADDRESSNull() {
-                this[this.tablecompany.COMPANY__ADDRESSColumn] = global::System.Convert.DBNull;
+            public void SetCOMPANY_ADDRESSNull() {
+                this[this.tablecompany.COMPANY_ADDRESSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1957,7 +1957,7 @@ namespace General_Journal.General_JournalDataSetTableAdapters {
             tableMapping.DataSetTable = "company";
             tableMapping.ColumnMappings.Add("COMPANY_ID", "COMPANY_ID");
             tableMapping.ColumnMappings.Add("COMPANY_NAME", "COMPANY_NAME");
-            tableMapping.ColumnMappings.Add("COMPANY_ ADDRESS", "COMPANY_ ADDRESS");
+            tableMapping.ColumnMappings.Add("COMPANY_ADDRESS", "COMPANY_ADDRESS");
             tableMapping.ColumnMappings.Add("COMPANY_PHONE", "COMPANY_PHONE");
             tableMapping.ColumnMappings.Add("COMPANY_TRADE_REGIS", "COMPANY_TRADE_REGIS");
             tableMapping.ColumnMappings.Add("COMPANY_TAX_ID", "COMPANY_TAX_ID");
@@ -1977,20 +1977,20 @@ namespace General_Journal.General_JournalDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_COMPANY_TAX_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_TAX_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `company` (`COMPANY_NAME`, `COMPANY_ ADDRESS`, `COMPANY_PHONE`, `COMP" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `company` (`COMPANY_NAME`, `COMPANY_ADDRESS`, `COMPANY_PHONE`, `COMP" +
                 "ANY_TRADE_REGIS`, `COMPANY_TAX_ID`) VALUES (?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_NAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY__ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_ ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_PHONE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_PHONE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_TRADE_REGIS", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_TRADE_REGIS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_TAX_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_TAX_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `company` SET `COMPANY_NAME` = ?, `COMPANY_ ADDRESS` = ?, `COMPANY_PHONE` = ?, `COMPANY_TRADE_REGIS` = ?, `COMPANY_TAX_ID` = ? WHERE ((`COMPANY_ID` = ?) AND ((? = 1 AND `COMPANY_NAME` IS NULL) OR (`COMPANY_NAME` = ?)) AND ((? = 1 AND `COMPANY_PHONE` IS NULL) OR (`COMPANY_PHONE` = ?)) AND ((? = 1 AND `COMPANY_TRADE_REGIS` IS NULL) OR (`COMPANY_TRADE_REGIS` = ?)) AND ((? = 1 AND `COMPANY_TAX_ID` IS NULL) OR (`COMPANY_TAX_ID` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `company` SET `COMPANY_NAME` = ?, `COMPANY_ADDRESS` = ?, `COMPANY_PHONE` = ?, `COMPANY_TRADE_REGIS` = ?, `COMPANY_TAX_ID` = ? WHERE ((`COMPANY_ID` = ?) AND ((? = 1 AND `COMPANY_NAME` IS NULL) OR (`COMPANY_NAME` = ?)) AND ((? = 1 AND `COMPANY_PHONE` IS NULL) OR (`COMPANY_PHONE` = ?)) AND ((? = 1 AND `COMPANY_TRADE_REGIS` IS NULL) OR (`COMPANY_TRADE_REGIS` = ?)) AND ((? = 1 AND `COMPANY_TAX_ID` IS NULL) OR (`COMPANY_TAX_ID` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_NAME", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_NAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY__ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_ ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_PHONE", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_PHONE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_TRADE_REGIS", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_TRADE_REGIS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("COMPANY_TAX_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "COMPANY_TAX_ID", global::System.Data.DataRowVersion.Current, false, null));
@@ -2018,7 +2018,7 @@ namespace General_Journal.General_JournalDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT COMPANY_ID, COMPANY_NAME, [COMPANY_ ADDRESS], COMPANY_PHONE, COMPANY_TRADE" +
+            this._commandCollection[0].CommandText = "SELECT COMPANY_ID, COMPANY_NAME, [COMPANY_ADDRESS], COMPANY_PHONE, COMPANY_TRADE" +
                 "_REGIS, COMPANY_TAX_ID FROM company";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -2134,18 +2134,18 @@ namespace General_Journal.General_JournalDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string COMPANY_NAME, string COMPANY__ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID) {
+        public virtual int Insert(string COMPANY_NAME, string COMPANY_ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID) {
             if ((COMPANY_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(COMPANY_NAME));
             }
-            if ((COMPANY__ADDRESS == null)) {
+            if ((COMPANY_ADDRESS == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(COMPANY__ADDRESS));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(COMPANY_ADDRESS));
             }
             if ((COMPANY_PHONE == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2185,18 +2185,18 @@ namespace General_Journal.General_JournalDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string COMPANY_NAME, string COMPANY__ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID, int Original_COMPANY_ID, string Original_COMPANY_NAME, string Original_COMPANY_PHONE, string Original_COMPANY_TRADE_REGIS, string Original_COMPANY_TAX_ID) {
+        public virtual int Update(string COMPANY_NAME, string COMPANY_ADDRESS, string COMPANY_PHONE, string COMPANY_TRADE_REGIS, string COMPANY_TAX_ID, int Original_COMPANY_ID, string Original_COMPANY_NAME, string Original_COMPANY_PHONE, string Original_COMPANY_TRADE_REGIS, string Original_COMPANY_TAX_ID) {
             if ((COMPANY_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(COMPANY_NAME));
             }
-            if ((COMPANY__ADDRESS == null)) {
+            if ((COMPANY_ADDRESS == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(COMPANY__ADDRESS));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(COMPANY_ADDRESS));
             }
             if ((COMPANY_PHONE == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;

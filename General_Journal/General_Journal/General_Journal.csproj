@@ -121,6 +121,9 @@
     <Compile Include="frmReport.Designer.cs">
       <DependentUpon>frmReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="General_JournalDataSet.cs">
+      <DependentUpon>General_JournalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="General_JournalDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,9 +198,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="General_Journal.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="General_Journal.accdb" />
     <None Include="Resources\bk2.jpg" />
     <None Include="Resources\bk1.jpg" />
   </ItemGroup>
