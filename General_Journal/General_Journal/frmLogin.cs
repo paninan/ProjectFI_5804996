@@ -79,6 +79,7 @@ namespace General_Journal
                     if ((int)cmd.ExecuteScalar() > 0)
                     {
                         // MessageBox.Show("You have successfully Logged In"); 
+                        setUserId();
                         frmCompany frmCom = new frmCompany();
                         frmCom.Show();
                         this.Hide();
@@ -110,6 +111,31 @@ namespace General_Journal
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void setUserId()
+        {
+            //// connect database
+            
+            conn = new OleDbConnection(System.Configuration.ConfigurationManager.ConnectionStrings["General_Journal.Properties.Settings.General_JournalConnectionString"].ConnectionString);
+            using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM users WHERE [USERNAME]=@UserName AND [PASSWORD]=@Password", conn))
+            {
+                cmd.Parameters.AddWithValue("@UserName", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                if (cmd.Connection.State != ConnectionState.Open)
+                {
+                    cmd.Connection.Open();
+                }                        
+
+                OleDbDataReader reader = null;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Program.ACTIVE_USER_ID = Int32.Parse(reader["id"].ToString());
+                }
+            }
+                
         }
 
         private void txtUsername_Leave(object sender, EventArgs e)

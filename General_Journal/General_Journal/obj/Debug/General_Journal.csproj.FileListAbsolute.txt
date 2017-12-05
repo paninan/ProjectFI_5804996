@@ -15,3 +15,5 @@ C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\Gene
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.csproj.GenerateResource.Cache
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.exe
 C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.pdb
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.csprojResolveAssemblyReference.cache
+C:\Repo\Waan\FI\ProjectFI_5804996\General_Journal\General_Journal\obj\Debug\General_Journal.frmGeneralJournal_openFrmAccNo.resources

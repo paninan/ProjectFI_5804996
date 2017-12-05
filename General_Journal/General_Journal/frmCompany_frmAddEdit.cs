@@ -17,19 +17,23 @@ namespace General_Journal
         public bool isAdd = false;
         public bool isEdit = false;
         public string compID = null;
+        private frmCompany FromComp = null;
 
-        public frmCompany_frmAddEdit()
+        public frmCompany_frmAddEdit(frmCompany frmCom)
         {
             InitializeComponent();
             isAdd = true;
+            FromComp = frmCom;
         }
 
-        public frmCompany_frmAddEdit(String companyID)
+        public frmCompany_frmAddEdit(frmCompany frmCom,String companyID)
         {
             // load company data 
             InitializeComponent();
             isEdit = true;
             compID = companyID;
+            FromComp = frmCom;
+
             //// connect database
             try
             {
@@ -107,16 +111,22 @@ namespace General_Journal
             }
 
             // save into database
-            if ( isAdd )
+            if (isAdd)
             {
                 save();
+                clearText();
+                //frmCompany. refreshCompanyData();
+
             }
 
             // edit on database by companyid
             if (isEdit)
             {
                 edit();
+                clearText();
+                
             }
+            FromComp.refreshCompanyData();
         }
 
         private void save()
@@ -162,6 +172,8 @@ namespace General_Journal
 
         }
 
+       
+
         private void edit()
         {
             //// connect database
@@ -175,7 +187,7 @@ namespace General_Journal
                     ",[COMPANY_PHONE]=@compPhone " +
                     ",[COMPANY_TRADE_REGIS]=@compTrade " +
                     ",[COMPANY_TAX_ID]=@compTax " +
-                    " WHERE [COMPANY_ID]=@compId";                  
+                    " WHERE [COMPANY_ID]=@compId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
                     conn.Open();
@@ -185,7 +197,7 @@ namespace General_Journal
                     cmd.Parameters.AddWithValue("@compTrade", txtTradeRegisNo.Text);
                     cmd.Parameters.AddWithValue("@compTax", txtTaxIdNo.Text);
                     cmd.Parameters.AddWithValue("@compId", compID);
-                    
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Updated ");
                 }
@@ -205,9 +217,24 @@ namespace General_Journal
 
         }
 
+        private void clearText()
+        {
+            txtCompanyName.Clear();
+            txtAddress.Clear();
+            txtPhone.Clear();
+            txtTradeRegisNo.Clear();
+            txtTaxIdNo.Clear();
+        }
+
+
         private void frmCompany_frmAddEdit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

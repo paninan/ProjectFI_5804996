@@ -16,5 +16,11 @@ namespace General_Journal
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmAuto_AddEdit frmAdd = new frmAuto_AddEdit();
+            frmAdd.Show();
+        }
     }
 }

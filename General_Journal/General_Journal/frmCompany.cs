@@ -29,6 +29,8 @@ namespace General_Journal
         private void dataGCmpany_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             String compId = dataGCompany[0, e.RowIndex].Value.ToString();
+            Program.ACTIVE_COMPANY_ID = Int32.Parse(compId);
+           // MessageBox.Show(Program.ACTIVE_COMPANY_ID.ToString() + " " + Program.ACTIVE_USER_ID.ToString());
             frmMain frmM = new frmMain(compId);
             frmM.Show();
             this.Hide();
@@ -36,9 +38,10 @@ namespace General_Journal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit();            
+            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit(this);            
             frmCompany_frmAddEdit.Show();
         }
+
 
         public void refreshCompanyData()
         {
@@ -47,10 +50,6 @@ namespace General_Journal
             dataGCompany.Refresh();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            refreshCompanyData();
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -96,9 +95,14 @@ namespace General_Journal
             String compId = dataGCompany[0, dataGCompany.CurrentCell.RowIndex].Value.ToString();
             String compName = dataGCompany[1, dataGCompany.CurrentCell.RowIndex].Value.ToString();
 
-            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit(compId);
+            frmCompany_frmAddEdit frmCompany_frmAddEdit = new frmCompany_frmAddEdit(this,compId);
             frmCompany_frmAddEdit.Show();
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

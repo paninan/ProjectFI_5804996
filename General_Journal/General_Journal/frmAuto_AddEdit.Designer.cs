@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAddEdit = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,12 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancal = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.general_JournalDataSet = new General_Journal.General_JournalDataSet();
+            this.accountNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accountNoTableAdapter = new General_Journal.General_JournalDataSetTableAdapters.accountNoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.general_JournalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountNoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddEdit
@@ -144,6 +150,20 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
+            // general_JournalDataSet
+            // 
+            this.general_JournalDataSet.DataSetName = "General_JournalDataSet";
+            this.general_JournalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountNoBindingSource
+            // 
+            this.accountNoBindingSource.DataMember = "accountNo";
+            this.accountNoBindingSource.DataSource = this.general_JournalDataSet;
+            // 
+            // accountNoTableAdapter
+            // 
+            this.accountNoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmAuto_AddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,8 +181,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAddEdit);
             this.Name = "frmAuto_AddEdit";
-            this.Text = "frmAuto_AddEdit";
+            this.Text = "-";
+            this.Load += new System.EventHandler(this.frmAuto_AddEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.general_JournalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountNoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +204,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancal;
         private System.Windows.Forms.Button btnBack;
+        private General_JournalDataSet general_JournalDataSet;
+        private System.Windows.Forms.BindingSource accountNoBindingSource;
+        private General_JournalDataSetTableAdapters.accountNoTableAdapter accountNoTableAdapter;
     }
 }

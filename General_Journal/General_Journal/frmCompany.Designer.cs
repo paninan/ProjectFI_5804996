@@ -42,7 +42,6 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new General_Journal.General_JournalDataSetTableAdapters.usersTableAdapter();
             this.companyTableAdapter = new General_Journal.General_JournalDataSetTableAdapters.companyTableAdapter();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.general_JournalDataSet)).BeginInit();
@@ -60,7 +59,7 @@
             this.cOMPANYIDDataGridViewTextBoxColumn,
             this.cOMPANYNAMEDataGridViewTextBoxColumn});
             this.dataGCompany.DataSource = this.companyBindingSource;
-            this.dataGCompany.Location = new System.Drawing.Point(169, 147);
+            this.dataGCompany.Location = new System.Drawing.Point(20, 80);
             this.dataGCompany.Name = "dataGCompany";
             this.dataGCompany.ReadOnly = true;
             this.dataGCompany.Size = new System.Drawing.Size(443, 237);
@@ -95,7 +94,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(367, 390);
+            this.btnAdd.Location = new System.Drawing.Point(218, 329);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 1;
@@ -105,7 +104,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(452, 390);
+            this.btnEdit.Location = new System.Drawing.Point(303, 329);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 2;
@@ -115,7 +114,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(537, 390);
+            this.btnDelete.Location = new System.Drawing.Point(388, 329);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 3;
@@ -125,19 +124,22 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(661, 643);
+            this.btnExit.Location = new System.Drawing.Point(388, 415);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 104);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(17, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(131, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Choose company";
             // 
@@ -154,22 +156,12 @@
             // 
             this.companyTableAdapter.ClearBeforeFill = true;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(169, 390);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 15;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // frmCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 711);
-            this.Controls.Add(this.btnRefresh);
+            this.BackgroundImage = global::General_Journal.Properties.Resources.bk2;
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
@@ -204,6 +196,5 @@
         private General_JournalDataSetTableAdapters.companyTableAdapter companyTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPANYNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

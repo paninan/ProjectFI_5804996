@@ -16,5 +16,12 @@ namespace General_Journal
         {
             InitializeComponent();
         }
+
+        private void frmAuto_AddEdit_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'general_JournalDataSet.accountNo' table. You can move, or remove it, as needed.
+            this.accountNoTableAdapter.Fill(this.general_JournalDataSet.accountNo);
+
+        }
     }
 }

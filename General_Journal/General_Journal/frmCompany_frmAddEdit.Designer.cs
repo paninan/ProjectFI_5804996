@@ -39,7 +39,6 @@
             this.txtTaxIdNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancal = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblAddEdit = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -137,23 +136,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(178, 389);
+            this.btnSave.Location = new System.Drawing.Point(257, 389);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancal
-            // 
-            this.btnCancal.Location = new System.Drawing.Point(259, 389);
-            this.btnCancal.Name = "btnCancal";
-            this.btnCancal.Size = new System.Drawing.Size(75, 23);
-            this.btnCancal.TabIndex = 11;
-            this.btnCancal.Text = "Cancal";
-            this.btnCancal.UseVisualStyleBackColor = true;
-            this.btnCancal.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBack
             // 
@@ -163,6 +152,7 @@
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblAddEdit
             // 
@@ -181,7 +171,6 @@
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.lblAddEdit);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnCancal);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtTaxIdNo);
             this.Controls.Add(this.label5);
@@ -214,7 +203,6 @@
         private System.Windows.Forms.TextBox txtTaxIdNo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancal;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblAddEdit;
     }

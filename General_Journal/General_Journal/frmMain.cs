@@ -16,6 +16,8 @@ namespace General_Journal
         String companyID = null;
         OleDbConnection conn = null;
 
+        public object Panel3 { get; private set; }
+
         public frmMain(String companyId)
         {
             InitializeComponent();
@@ -36,13 +38,7 @@ namespace General_Journal
                 //conn.Open();
                
                 lblCompanyName.Text = "Unknow";
-                //OleDbDataReader reader = null;
-                //OleDbCommand cmd = new OleDbCommand("select * from company where COMPANY_ID="+companyID, conn);
-                //reader = cmd.ExecuteReader();
-                //while (reader.Read())
-                //{
-                //    lblCompanyName.Text = "Company : "+reader["COMPANY_NAME"].ToString();                    
-                //}
+                
 
                 // load from access 
                 using (OleDbCommand cmd = new OleDbCommand("select * from company where [COMPANY_ID]=@compxxID", conn))
@@ -67,6 +63,59 @@ namespace General_Journal
             {
                 conn.Close();
             }
+
+        }
+
+        private void btnAccNO_Click(object sender, EventArgs e)
+        {
+
+            panel3.Controls.Clear();
+            frmAccNo frmAcc = new frmAccNo();
+            frmAcc.TopLevel = false;
+            panel3.Controls.Add(frmAcc);
+            frmAcc.Show();
+            
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAutoAcc_Click(object sender, EventArgs e)
+        {
+
+            panel3.Controls.Clear();
+            frmAuto frmAut = new frmAuto();
+            frmAut.TopLevel = false;
+            panel3.Controls.Add(frmAut);
+            frmAut.Show();
+        }
+
+        private void btnJournal_Click(object sender, EventArgs e)
+        {
+
+            panel3.Controls.Clear();
+            frmGeneralJournal frmGer = new frmGeneralJournal();
+            frmGer.TopLevel = false;
+            panel3.Controls.Add(frmGer);
+            frmGer.Show();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            frmReport frmRep = new frmReport();
+            frmRep.TopLevel = false;
+            panel3.Controls.Add(frmRep);
+            frmRep.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmCompany frmComp = new frmCompany();
+            frmComp.Show();
+            this.Close();
 
         }
     }

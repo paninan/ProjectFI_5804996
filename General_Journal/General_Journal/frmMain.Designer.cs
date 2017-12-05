@@ -31,8 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAutoAcc = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnJournal = new System.Windows.Forms.Button();
             this.btnAccNO = new System.Windows.Forms.Button();
@@ -63,56 +62,50 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.btnAutoAcc);
-            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.btnJournal);
             this.panel2.Controls.Add(this.btnAccNO);
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 90);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 600);
+            this.panel2.Size = new System.Drawing.Size(149, 600);
             this.panel2.TabIndex = 1;
             // 
-            // btnAutoAcc
+            // btnBack
             // 
-            this.btnAutoAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnAutoAcc.Location = new System.Drawing.Point(3, 58);
-            this.btnAutoAcc.Name = "btnAutoAcc";
-            this.btnAutoAcc.Size = new System.Drawing.Size(137, 56);
-            this.btnAutoAcc.TabIndex = 3;
-            this.btnAutoAcc.Text = "Automatic account";
-            this.btnAutoAcc.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnExit.Location = new System.Drawing.Point(3, 543);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(137, 56);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit program";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnBack.Location = new System.Drawing.Point(3, 541);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(137, 56);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReport.Location = new System.Drawing.Point(3, 168);
+            this.btnReport.Location = new System.Drawing.Point(3, 119);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(137, 56);
             this.btnReport.TabIndex = 2;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnJournal
             // 
             this.btnJournal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnJournal.Location = new System.Drawing.Point(3, 113);
+            this.btnJournal.Location = new System.Drawing.Point(3, 61);
             this.btnJournal.Name = "btnJournal";
             this.btnJournal.Size = new System.Drawing.Size(137, 56);
             this.btnJournal.TabIndex = 1;
             this.btnJournal.Text = "General Journal";
             this.btnJournal.UseVisualStyleBackColor = true;
+            this.btnJournal.Click += new System.EventHandler(this.btnJournal_Click);
             // 
             // btnAccNO
             // 
@@ -123,14 +116,16 @@
             this.btnAccNO.TabIndex = 0;
             this.btnAccNO.Text = "Account No.";
             this.btnAccNO.UseVisualStyleBackColor = true;
+            this.btnAccNO.Click += new System.EventHandler(this.btnAccNO_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Location = new System.Drawing.Point(144, 90);
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Location = new System.Drawing.Point(146, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(640, 600);
+            this.panel3.Size = new System.Drawing.Size(638, 600);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // frmMain
             // 
@@ -159,10 +154,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblCompanyName;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnJournal;
         private System.Windows.Forms.Button btnAccNO;
-        private System.Windows.Forms.Button btnAutoAcc;
     }
 }
